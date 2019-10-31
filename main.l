@@ -1,5 +1,19 @@
 
-/* escáner para un lenguaje de juguete al estilo de Pascal */
+/*
+Path
+cd Documentos/Lenguajes/AnalizadorLexico/
+Build
+
+flex main.l
+
+cc lex.yy.c -lfl
+
+Run 
+
+a.out < sourceCode
+
+
+escáner para un lenguaje de juguete al estilo de Pascal */
 
 %{
 /* se necesita esto para la llamada a atof() más abajo */
@@ -25,11 +39,12 @@ Patrones que se reconoceran del fichero de entrada
 */
 %%
 
-{VOID}			{ printf( " space "); }
+{VOID}			;
 
 {DIGITO}+		{ printf( " entero "); }
 
 {DIGITO}+"."{DIGITO}*	{ printf( "real" ); }
+
 
 
 {ID}			{ printf( " predicado " ); }
@@ -37,10 +52,13 @@ Patrones que se reconoceran del fichero de entrada
 {ID}[a-zA-Z0-9]*	{ printf( " error " ); }
 {NUMBER}[a-zA-Z]*	{ printf( " error " ); }
 
-"+"|"-"|"*"|"/"   	{ printf( " operadorLogico "); }
+"+"|"-"|"*"|"/"   	{ printf( " operadorAritmetico "); }
+"&&"|"\|\|"|"->"	{ printf( " operadorLogico "); }
 "="|"<>"|"<"|">"   	{ printf( " operadorRelacional "); }
 
 "{"[^}\n]*"}"     /* se come una linea de comentarios */
+
+{END}			{ printf( "\n"); }
 
 .           printf( "Error" );
 
