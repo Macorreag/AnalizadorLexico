@@ -8,7 +8,7 @@ Build with
 
 Run with 
 
-> ./executable < sourceCode
+> ./executable < test/code1 > out/code1.out
 	
 */
 
@@ -23,6 +23,8 @@ Run with
 
 NUMBER		[0-9]+|[0-9]+\.[0-9]+|\.[0-9]+
 IDPREDI		[pqrt][0-9]{0,5}
+
+IDVAR		[xyz][0-9]{0,5}
 
 VOID		[ \t\n]+
 END		[;]
@@ -47,10 +49,11 @@ Patrones que se reconoceran del fichero de entrada
 {NUMBER}		{ printf( " number " ); }
 
 
-{IDPREDI}":"[{NUMBER}|{ARITMETIC}]*		{ printf( " predicado " ); }
+{IDPREDI}		{ printf( " predicadoArit " ); }
 
-{IDPREDI}[a-zA-Z0-9]*	{ printf( "-" ); }
-{NUMBER}[a-zA-Z]*	{ printf( "-" ); }
+{IDVAR}			{ printf( " predicadoAlge " ); }
+
+
 
 {ARITMETIC}		{ printf( " operador "); }
 {LOGIC}			{ printf( " operador "); }
