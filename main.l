@@ -13,23 +13,24 @@ Run with
 */
 
 %{
-/* se necesita esto para la llamada a atof() más abajo */
-#include <math.h>
+
+
+
 %}
 /*Definiciones 
 <Nombre>  <expresion_regular>
 */
 
-
 NUMBER		[0-9]+|[0-9]+\.[0-9]+|\.[0-9]+
-IDPREDI		[pqrt][0-9]{0,5}
 
+IDPREDI		[pqrt][0-9]{0,5}
 IDVAR		[xyz][0-9]{0,5}
 
 VOID		[ \t\n]+
 END		[;]
-TEXT		\"[^\"\n]*\"
-COMMENT 	\#[a-zA-Z][a-zA-Z0-9]*
+
+
+COMMENT 	["#"][ \t\na-zA-Z0-9]*[\n]
 
 ARITMETIC	"+"|"-"|"*"|"/"
 LOGIC		"&&"|"\|\|"|"->"
@@ -45,12 +46,11 @@ Patrones que se reconoceran del fichero de entrada
 */
 %%
 
-{VOID}			;
+{VOID}			/*Espacios en blanco*/
 {NUMBER}		{ printf( " number " ); }
 
 
 {IDPREDI}		{ printf( " predicadoArit " ); }
-
 {IDVAR}			{ printf( " predicadoAlge " ); }
 
 
@@ -60,12 +60,12 @@ Patrones que se reconoceran del fichero de entrada
 {RELATIONAL}		{ printf( " operador "); }
 
 {DELIMITER}		{ printf( " delimitador "); }
-
-"{"[^}\n]*"}"     /* se come una linea de comentarios */
+{COMMENT}		/*Linea de commentario*/
 
 {END}			{ printf( "\n"); }
 
-.           		printf( "Error" );
+
+.           		{ printf( "Desconocido" ); }
 
 %%
 
