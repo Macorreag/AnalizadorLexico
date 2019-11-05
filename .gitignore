@@ -1,2 +1,3 @@
-*.out
+executable*
+lex.yy.c*
 

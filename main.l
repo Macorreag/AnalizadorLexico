@@ -1,19 +1,16 @@
 
 /*
 Path
-cd Documentos/Lenguajes/AnalizadorLexico/
-Build
+ cd Documentos/Lenguajes/AnalizadorLexico/
+Build with 
 
-flex main.l
+> make
 
-cc lex.yy.c -lfl
+Run with 
 
-Run 
-
-a.out < sourceCode
-
-
-escáner para un lenguaje de juguete al estilo de Pascal */
+> ./executable < sourceCode
+	
+*/
 
 %{
 /* se necesita esto para la llamada a atof() más abajo */
@@ -23,13 +20,20 @@ escáner para un lenguaje de juguete al estilo de Pascal */
 <Nombre>  <expresion_regular>
 */
 
-DIGITO  [0-9]
-NUMBER	[0-9]+|[0-9]+\.[0-9]+|\.[0-9]+
-ID      [pqrt][0-9]{0,5}
-VOID	[ \t\n]+
-END	[;]
-TEXT	\"[^\"\n]*\"
-COMMENT \#[a-zA-Z][a-zA-Z0-9]*
+
+NUMBER		[0-9]+|[0-9]+\.[0-9]+|\.[0-9]+
+IDPREDI		[pqrt][0-9]{0,5}
+
+VOID		[ \t\n]+
+END		[;]
+TEXT		\"[^\"\n]*\"
+COMMENT 	\#[a-zA-Z][a-zA-Z0-9]*
+
+ARITMETIC	"+"|"-"|"*"|"/"
+LOGIC		"&&"|"\|\|"|"->"
+RELATIONAL	":"|":="|"<>"|"<"|">"
+
+DELIMITER	"("|")"|"\["|"\]"|"{"|"}"
 
 /* Reglas Lexicas 
 Patrones que se reconoceran del fichero de entrada
@@ -40,21 +44,19 @@ Patrones que se reconoceran del fichero de entrada
 %%
 
 {VOID}			;
-
-{DIGITO}+		{ printf( " entero "); }
-
-{DIGITO}+"."{DIGITO}*	{ printf( "real" ); }
+{NUMBER}		{ printf( " number " ); }
 
 
+{IDPREDI}":"[{NUMBER}|{ARITMETIC}]*		{ printf( " predicado " ); }
 
-{ID}			{ printf( " predicado " ); }
+{IDPREDI}[a-zA-Z0-9]*	{ printf( "-" ); }
+{NUMBER}[a-zA-Z]*	{ printf( "-" ); }
 
-{ID}[a-zA-Z0-9]*	{ printf( " error " ); }
-{NUMBER}[a-zA-Z]*	{ printf( " error " ); }
+{ARITMETIC}		{ printf( " operador "); }
+{LOGIC}			{ printf( " operador "); }
+{RELATIONAL}		{ printf( " operador "); }
 
-"+"|"-"|"*"|"/"   	{ printf( " operadorAritmetico "); }
-"&&"|"\|\|"|"->"	{ printf( " operadorLogico "); }
-"="|"<>"|"<"|">"   	{ printf( " operadorRelacional "); }
+{DELIMITER}		{ printf( " delimitador "); }
 
 "{"[^}\n]*"}"     /* se come una linea de comentarios */
 
