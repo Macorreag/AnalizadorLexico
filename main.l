@@ -24,7 +24,7 @@ escáner para un lenguaje de juguete al estilo de Pascal */
 */
 
 DIGITO  [0-9]
-NUMBER [0-9]+|[0-9]+\.[0-9]+|\.[0-9]+
+NUMBER	[0-9]+|[0-9]+\.[0-9]+|\.[0-9]+
 ID      [pqrt][0-9]{0,5}
 VOID	[ \t\n]+
 END	[;]
@@ -60,7 +60,7 @@ Patrones que se reconoceran del fichero de entrada
 
 {END}			{ printf( "\n"); }
 
-.           printf( "Error" );
+.           		printf( "Error" );
 
 %%
 

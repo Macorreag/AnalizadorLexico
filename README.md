@@ -36,6 +36,11 @@ Este analizador lexico esta compuesto de las siguientes  categorias lexicas las 
 
 
 ## Iniciar en LinuX
+
+###  Compilación programa 
+
+> `$ make`
+
 Ejecutando FLEX en Linux
 
 Para compilar los archivos lex de ejemplo (por ejemplo, example1.l) en las estaciones de trabajo Linux utilizando flex (una versión diferente de lex), ejecute las siguientes instrucciones desde la línea de comandos (%):
@@ -53,4 +58,4 @@ Para ejecutar el escáner, simplemente escriba el nombre del ejecutable en la l�
 % a.out <words.txt
 
 Nota: Si recibe el mensaje de error a.out: Comando no encontrado cuando ejecuta el programa, intente agregar lo siguiente línea:
-establecer ruta = ($ ruta.) a su archivo .login. Esto incluirá su directorio actual en la ruta de búsqueda y se debe encontrar el ejecutable.cutable.le.
+establecer ruta = ($ ruta.) a su archivo .login. Esto incluirá su directorio actual en la ruta de búsqueda y se debe encontrar el ejecutable.cutable.le.le.
