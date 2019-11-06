@@ -22,7 +22,7 @@ Este analizador lexico esta compuesto de las siguientes  categorias lexicas las 
 
 A continuación se especifican las expresiones regulares que determinan el patrón que caracteriza a cada una de esas categorías léxicas.
 
- |Categoría | Expresión Regular |
+|Categoría | Expresión Regular |
 | ---------- | ---------- |
 | Espacio  | ` [ \t\n]+`   |
 | Predicado Aritmetico   | <p><code>[pqrt][0-9]{0,5}<p><code>|
@@ -66,4 +66,4 @@ Para ejecutar el escáner, simplemente escriba el nombre del ejecutable en la l�
 
 Nota: Si recibe el mensaje de error a.out: Comando no encontrado cuando ejecuta el programa, intente agregar lo siguiente línea:
 establecer ruta = ($ ruta.) a su archivo .login. Esto incluirá su directorio actual en la ruta de búsqueda y se debe encontrar el ejecutable.cutable.le.le.., intente agregar lo siguiente línea:
-establecer ruta = ($ ruta.) a su archivo .login. Esto incluirá su directorio actual en la ruta de búsqueda y se debe encontrar el ejecutable.cutable.le.le..contrar el ejecutable.cutable.le.le..e.cutable.le.le...
+establecer ruta = ($ ruta.) a su archivo .login. Esto incluirá su directorio actual en la ruta de búsqueda y se debe encontrar el ejecutable.cutable.le.le..contrar el ejecutable.cutable.le.le..e.cutable.le.le....
