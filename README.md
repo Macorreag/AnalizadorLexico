@@ -1,43 +1,52 @@
-# Analizador Lexico
+# Analizador Léxico
 
 ## Creador
 
 [**Macorreag**](https://github.com/macorreag)  Miller Alexander Correa Gonzalez
 
-## Categorias Lexicas
+## Categorias Léxicas
 Este analizador lexico esta compuesto de las siguientes  categorias lexicas las cuales constituyen un simbolo elemental  de un lenguaje de programación:
 
-* Identificador
-* Asignacion
-* Entero
-* Terminador
+* Espacio
+* Numero
+* Predicado Aritmetico
+* Predicado Algebraico
+* Operador
+* Delimitador
+* Comentario
+* Fin de Sentencia
+* Desconocido
 
 
-## expresiones regulares que determinan el patrón que caracteriza a cada una de esas categorías léxicas
+## Expresiones Regulares
 
-* Predicados aritméticos: 
-> * PREDICATE = [pqrt][0-9]{0,5}
-> * 
-* Predicados Algebraicos 
-> * PLUS		= 
-> * MINUS 		=
-> * TIMES		=
-> * DIVIDED	=
-> * NUMBER	= [0-9]+|[0-9]+\.[0-9]+|\.[0-9]+
-> * VAR			= [xyz][0-9]{0,5}
+A continuación se especifican las expresiones regulares que determinan el patrón que caracteriza a cada una de esas categorías léxicas.
+
+> |Categoría | Expresión Regular |
+| ---------- | ---------- |
+| Espacio  | ` [ \t\n]+`   |
+| Predicado Aritmetico   | <p><code>[pqrt][0-9]{0,5}<p><code>|
+| Predicado Algebraico | <p><code>[xyz][0-9]{0,5}<p><code>|
+| Operador | <p><code>"+"|"-"|"*"|"/"||"&&"|"\|\|"|"->"||":"|":="|"<>"|"<"|">"<p><code>|
+| Delimitador |<p><code>"("|")"|"\["|"\]"|"{"|"}"<p><code> |
+| Comentario |<p><code>["#"][ \t\na-zA-Z0-9]*[\n]<p><code> |
+| Fin de Sentencia | <p><code>[;]<p><code>|
+| Desconocido |<p><code>.<p><code> |
 
 
 
 
-##Escenarios representativos de pruebas
 
+
+
+##Uso
 
 
 ## Iniciar en LinuX
 
 ###  Compilación programa 
 
-> `$ make`
+> ` make`
 
 Ejecutando FLEX en Linux
 
@@ -56,4 +65,5 @@ Para ejecutar el escáner, simplemente escriba el nombre del ejecutable en la l�
 % a.out <words.txt
 
 Nota: Si recibe el mensaje de error a.out: Comando no encontrado cuando ejecuta el programa, intente agregar lo siguiente línea:
-establecer ruta = ($ ruta.) a su archivo .login. Esto incluirá su directorio actual en la ruta de búsqueda y se debe encontrar el ejecutable.cutable.le.le..
+establecer ruta = ($ ruta.) a su archivo .login. Esto incluirá su directorio actual en la ruta de búsqueda y se debe encontrar el ejecutable.cutable.le.le.., intente agregar lo siguiente línea:
+establecer ruta = ($ ruta.) a su archivo .login. Esto incluirá su directorio actual en la ruta de búsqueda y se debe encontrar el ejecutable.cutable.le.le..contrar el ejecutable.cutable.le.le..e.cutable.le.le..

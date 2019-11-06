@@ -10,7 +10,7 @@ Build with
 Test with 
 
 > ./executable < test/code1 > out/code1.out
-	
+		
 */
 
 %{
@@ -48,7 +48,7 @@ Patrones que se reconoceran del fichero de entrada
 %%
 
 {VOID}			/*Espacios en blanco*/
-{NUMBER}		{ printf( " number " ); }
+{NUMBER}		{ printf( " Numbero " ); }
 
 
 {IDPREDI}		{ printf( " predicadoArit " ); }
@@ -56,9 +56,7 @@ Patrones que se reconoceran del fichero de entrada
 
 
 
-{ARITMETIC}		{ printf( " operador "); }
-{LOGIC}			{ printf( " operador "); }
-{RELATIONAL}		{ printf( " operador "); }
+{ARITMETIC}||{LOGIC}||{RELATIONAL}	{ printf( " operador "); }
 
 {DELIMITER}		{ printf( " delimitador "); }
 {COMMENT}		/*Linea de commentario*/
