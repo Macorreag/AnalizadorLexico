@@ -1,12 +1,13 @@
-
 /*
 Path
- cd Documentos/Lenguajes/AnalizadorLexico/
+ 
+> cd Documentos/Lenguajes/AnalizadorLexico/
+
 Build with 
 
 > make
 
-Run with 
+Test with 
 
 > ./executable < test/code1 > out/code1.out
 	

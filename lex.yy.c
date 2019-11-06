@@ -492,17 +492,19 @@ char *yytext;
 #line 1 "main.l"
 /*
 Path
- cd Documentos/Lenguajes/AnalizadorLexico/
+ 
+> cd Documentos/Lenguajes/AnalizadorLexico/
+
 Build with 
 
 > make
 
-Run with 
+Test with 
 
 > ./executable < test/code1 > out/code1.out
 	
 */
-#line 16 "main.l"
+#line 17 "main.l"
 
 
 
@@ -515,7 +517,7 @@ Patrones que se reconoceran del fichero de entrada
 <patron(expresión_regular)> <acción(codigo C a ejecutar)>
 
 */
-#line 519 "lex.yy.c"
+#line 521 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -733,10 +735,10 @@ YY_DECL
 		}
 
 	{
-#line 47 "main.l"
+#line 48 "main.l"
 
 
-#line 740 "lex.yy.c"
+#line 742 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -796,66 +798,66 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 49 "main.l"
+#line 50 "main.l"
 /*Espacios en blanco*/
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 50 "main.l"
+#line 51 "main.l"
 { printf( " number " ); }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 53 "main.l"
+#line 54 "main.l"
 { printf( " predicadoArit " ); }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 54 "main.l"
+#line 55 "main.l"
 { printf( " predicadoAlge " ); }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 58 "main.l"
+#line 59 "main.l"
 { printf( " operador "); }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 59 "main.l"
+#line 60 "main.l"
 { printf( " operador "); }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 60 "main.l"
+#line 61 "main.l"
 { printf( " operador "); }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 62 "main.l"
+#line 63 "main.l"
 { printf( " delimitador "); }
 	YY_BREAK
 case 9:
 /* rule 9 can match eol */
 YY_RULE_SETUP
-#line 63 "main.l"
+#line 64 "main.l"
 /*Linea de commentario*/
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 65 "main.l"
+#line 66 "main.l"
 { printf( "\n"); }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 68 "main.l"
+#line 69 "main.l"
 { printf( "Desconocido" ); }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 70 "main.l"
+#line 71 "main.l"
 ECHO;
 	YY_BREAK
-#line 859 "lex.yy.c"
+#line 861 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1856,7 +1858,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 70 "main.l"
+#line 71 "main.l"
 
 
 
