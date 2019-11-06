@@ -1,4 +1,4 @@
-## Test del Analizador Lexico
+## Test del Analizador Léxico
 
 Los test realizados sobre el analizador lexico consisten en ingresar el codigo fuente que se encuentra en los archivos de la carpeta test y ver los tokens de salida que se encuentran en el archivo nombreCodigo.out de la carpeta /out
 
