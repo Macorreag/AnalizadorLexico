@@ -27,8 +27,8 @@ A continuaciÃ³n se especifican las expresiones regulares que determinan el patrÃ
 | Espacio  | ` [ \t\n]+`   |
 | Predicado Aritmetico   | ` [pqrt][0-9]{0,5} `|
 | Predicado Algebraico | ` [xyz][0-9]{0,5} `|
-| Operador | ` "+"|"-"|"*"|"/"||"&&"|"\|\|"|"->"||":"|":="|"<>"|"<"|">" ` |
-| Delimitador |` "("|")"|"\["|"\]"|"{"|"}" `  |
+| Operador | ` [ "+"|"-"|"*"|"/"||"&&"|"\|\|"|"->"||":"|":="|"<>"|"<"|">"[  ` |
+| Delimitador |` ["("|")"|"\["|"\]"|"{"|"}"] `  |
 | Comentario |` ["#"][ \t\na-zA-Z0-9]*[\n] ` |
 | Fin de Sentencia | ` [;] `|
 | Desconocido |` . ` |
