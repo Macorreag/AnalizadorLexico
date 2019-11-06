@@ -25,45 +25,41 @@ A continuación se especifican las expresiones regulares que determinan el patr�
 |Categoría | Expresión Regular |
 | ---------- | ---------- |
 | Espacio  | ` [ \t\n]+`   |
-| Predicado Aritmetico   | <p><code>[pqrt][0-9]{0,5}<p><code>|
-| Predicado Algebraico | <p><code>[xyz][0-9]{0,5}<p><code>|
-| Operador | <p><code>"+"|"-"|"*"|"/"||"&&"|"\|\|"|"->"||":"|":="|"<>"|"<"|">"<p><code>|
-| Delimitador |<p><code>"("|")"|"\["|"\]"|"{"|"}"<p><code> |
-| Comentario |<p><code>["#"][ \t\na-zA-Z0-9]*[\n]<p><code> |
-| Fin de Sentencia | <p><code>[;]<p><code>|
-| Desconocido |<p><code>.<p><code> |
+| Predicado Aritmetico   | `[pqrt][0-9]{0,5}`|
+| Predicado Algebraico | `[xyz][0-9]{0,5}`|
+| Operador | `"+"|"-"|"*"|"/"||"&&"|"\|\|"|"->"||":"|":="|"<>"|"<"|">"`|
+| Delimitador |`"("|")"|"\["|"\]"|"{"|"}"` |
+| Comentario |`["#"][ \t\na-zA-Z0-9]*[\n]` |
+| Fin de Sentencia | `[;]`|
+| Desconocido |`.` |
 
 
+## Uso en LinuX
 
+Para compilar los archivos Lex del  Analizador Lexico _main.l_  en las estaciones de trabajo Linux Lex ejecute las siguientes instrucciones desde la línea de comandos :
 
+> `make`
 
-
-
-##Uso
-
-
-## Iniciar en LinuX
-
-###  Compilación programa 
-
-> ` make`
-
-Ejecutando FLEX en Linux
-
-Para compilar los archivos lex de ejemplo (por ejemplo, example1.l) en las estaciones de trabajo Linux utilizando flex (una versión diferente de lex), ejecute las siguientes instrucciones desde la línea de comandos (%):
+Internamente ejecutan las siguientes instrucciones:
 
 > `flex main.l`
 
-> `cc lex.yy. c -lfl`
+Este comando usa las expresiones regulares y el código c en el archivo lex (main.l) para crear un archivo en  **C** que contenga el código para el escáner. Este archivo c siempre se llama lex.yy.c.
 
-El primer comando (flex ...) usa las expresiones regulares y el código c en el archivo lex (ejemplo1.l) para crear un archivo ac que contenga el código para el escáner. Este archivo c siempre se llama lex.yy.c. El segundo comando (cc ...) compila el archivo c en un ejecutable. Aquí el ejecutable será a.out. Para especificar un nombre diferente para el ejecutable, compile lex.yy.c usando el comando:
+> `cc lex.yy.c -lfl -o  executable`
 
-% cc -o newexecutablename lex.yy.c -lfl
+Este comando compila el archivo **C** en un ejecutable con el nombre de _executable_.
 
-Para ejecutar el escáner, simplemente escriba el nombre del ejecutable en la línea de comandos y especifique un archivo de entrada utilizando el operador de redireccionamiento. Por ejemplo, si el nombre del archivo de entrada es words.txt, escriba el comando:
+> `./executable < test/code1 > out/code1.out`
 
-% a.out <words.txt
+Use este comado para ejecutar el escáner, simplemente escriba el nombre del ejecutable en la línea de comandos y especifique un archivo de entrada utilizando el operador de redireccionamiento. En el  ejemplo se direcciona al analizador el archivo _code1_ que se encuentra en la carpeta _test_  y el resultado se redirecciona al archivo _code1.out_ que se encuentra en la carpeta _out_.
 
-Nota: Si recibe el mensaje de error a.out: Comando no encontrado cuando ejecuta el programa, intente agregar lo siguiente línea:
-establecer ruta = ($ ruta.) a su archivo .login. Esto incluirá su directorio actual en la ruta de búsqueda y se debe encontrar el ejecutable.cutable.le.le.., intente agregar lo siguiente línea:
-establecer ruta = ($ ruta.) a su archivo .login. Esto incluirá su directorio actual en la ruta de búsqueda y se debe encontrar el ejecutable.cutable.le.le..contrar el ejecutable.cutable.le.le..e.cutable.le.le....
+
+
+ escriba el comando:
+
+% a.out < words.txt
+
+% a.out < words.txt
+
+
