@@ -28,7 +28,7 @@ A continuaciÃ³n se especifican las expresiones regulares que determinan el patrÃ
 | Predicado Aritmetico   | ` [pqrt][0-9]{0,5} `|
 | Predicado Algebraico | ` [xyz][0-9]{0,5} `|
 | Operador | ` [ "+"|"-"|"*"|"/"||"&&"|"\|\|"|"->"||":"|":="|"<>"|"<"|">"[  ` |
-| Delimitador |` ["("|")"|"\["|"\]"|"{"|"}"] `  |
+| Delimitador |<p><code> ["("|")"|"\["|"\]"|"{"|"}"]  </code></p>|
 | Comentario |` ["#"][ \t\na-zA-Z0-9]*[\n] ` |
 | Fin de Sentencia | ` [;] `|
 | Desconocido |` . ` |
