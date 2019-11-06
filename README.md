@@ -27,8 +27,8 @@ A continuación se especifican las expresiones regulares que determinan el patr�
 | Espacio  | ` [ \t\n]+`   |
 | Predicado Aritmetico   | ` [pqrt][0-9]{0,5} `|
 | Predicado Algebraico | ` [xyz][0-9]{0,5} `|
-| Operador | ` ["+" \| "-" \| "*" \| "\/"] \| \| ["&&"\|"\|\|"\|"->"]\|\|[":"\|":="\|"<>"\|"<"\|">"]  ` |
-| Delimitador |`  [ "(" \| ")" \| "\["\|"\]"\|"{"\|"}"]  `|
+| Operador | ` ["+"\|"-"\|"*"\|"/"] \|\| ["&&"\|"\|\|"->"] \|\| [":"\|":="\|"<>"\|"<"\|">"]  ` |
+| Delimitador |`  [ "("\|")"\|"["\|"\]"\|"{"\|"}"]  `|
 | Comentario |` ["#"][ \t\na-zA-Z0-9]*[\n] ` |
 | Fin de Sentencia | ` [;] `|
 | Desconocido |` . ` |
@@ -52,4 +52,4 @@ Este comando compila el archivo **C** en un ejecutable con el nombre de _executa
 
 > `./executable < test/code1 > out/code1.out`
 
-Use este comado para ejecutar el escáner, simplemente escriba el nombre del ejecutable en la línea de comandos y especifique un archivo de entrada utilizando el operador de redireccionamiento. En el  ejemplo se direcciona al analizador el archivo _code1_ que se encuentra en la carpeta _test_  y el resultado se redirecciona al archivo _code1.out_ que se encuentra en la carpeta _out_.ut_.
+Use este comado para ejecutar el escáner, simplemente escriba el nombre del ejecutable en la línea de comandos y especifique un archivo de entrada utilizando el operador de redireccionamiento. En el  ejemplo se direcciona al analizador el archivo _code1_ que se encuentra en la carpeta _test_  y el resultado se redirecciona al archivo _code1.out_ que se encuentra en la carpeta _out_.ut_.eta _out_.ut_.
