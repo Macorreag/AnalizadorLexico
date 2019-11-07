@@ -8,8 +8,7 @@ Los test realizados sobre el analizador lexico consisten en ingresar el codigo f
  > ./executable < test/code1 > out/code1.out
 
 > **Resultados**
-Este test corresponde al enviado por el profesor para realizar la prueba del analizador lexico, el cual pone a prueba la ma las 
-
+Este test corresponde al enviado por el profesor para realizar la prueba del analizador léxico, el cual pone a prueba la mayoría de categorías léxicas del analizador.
 ### Test2
 
 > **Comando**
@@ -26,5 +25,5 @@ Este test corresponde al enviado por el profesor para realizar la prueba del ana
 
 > **Resultados**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY1MTQ5NTUwXX0=
+eyJoaXN0b3J5IjpbNzEyODQxMTE0XX0=
 -->
