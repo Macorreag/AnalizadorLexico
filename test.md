@@ -27,7 +27,7 @@ Este test se realizo con el objetivo de comprobar el reconocimiento de predicado
  > ./executable < test/code3 > out/code3.out
 
 > **Resultados**
-Este test se realizo con el objetivo de comprobar el reconocimiento de predicados  algebraicos y ademas comprobar que el analizador léxico omita las tabulaciones y los espacios.
+Este test se realizo con el objetivo de comprobar el reconocimiento de predicados  algebraicos y ademas comprobar que el analizador léxico omita las tabulaciones y los espacios.Efectivamente el test muestra que reconoce dichos predicados algebraicos al observar la salida y ademas omite la tabulaciones y espacios pues no genera ningún token para estos,
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNTkyOTg2MywtMTkyMDE0MTY0OF19
+eyJoaXN0b3J5IjpbMTAxNjQ3NDE3NiwtMTkyMDE0MTY0OF19
 -->
