@@ -1,6 +1,6 @@
 ## Test del Analizador Léxico
 
-Los test realizados sobre el analizador lexico consisten en ingresar el codigo fuente que se encuentra en los archivos de la carpeta test y ver los tokens de salida que se encuentran en el archivo nombreCodigo.out de la carpeta /out
+Los test realizados sobre el analizador lexico consisten en ingresar el codigo fuente (code) que se encuentra en los archivos de la carpeta test y ver los tokens de salida que se encuentran en el archivo nombreCodigo.out de la carpeta /out
 
 ### Test1
 > **Comando**
@@ -8,6 +8,7 @@ Los test realizados sobre el analizador lexico consisten en ingresar el codigo f
  > ./executable < test/code1 > out/code1.out
 
 > **Resultados**
+Este test corresponde al enviado por el profesor para realizar la prueba del analizador lexico, el cual pone a prueba la ma las 
 
 ### Test2
 
@@ -24,3 +25,6 @@ Los test realizados sobre el analizador lexico consisten en ingresar el codigo f
  > ./executable < test/code3 > out/code3.out
 
 > **Resultados**
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNDY1MTQ5NTUwXX0=
+-->
