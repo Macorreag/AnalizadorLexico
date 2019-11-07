@@ -16,7 +16,9 @@ Este test corresponde al enviado por el profesor para realizar la prueba del ana
  > ./executable < test/code2 > out/code2.out
 
 > **Resultados**
-Este test se realizo con el objetivo de comprobar el reconocimiento de predicados aritméticos,  los operadores ,numeros   operador  number 
+Este test se realizo con el objetivo de comprobar el reconocimiento de predicados aritméticos,  los operadores y números. Para facilitar la realización del test se escribieron solamente cadenas que deben ser reconocidas y con la estructura:
+ predicadoArit-operador-number-operador-number  
+ Por lo tanto en el archivo de salida solo deben 
 
 ### Test3
 
@@ -26,5 +28,5 @@ Este test se realizo con el objetivo de comprobar el reconocimiento de predicado
 
 > **Resultados**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMDMwNzMxMiwtMTkyMDE0MTY0OF19
+eyJoaXN0b3J5IjpbLTc3Njg1ODQxNywtMTkyMDE0MTY0OF19
 -->
