@@ -25,9 +25,20 @@ Este test se realizo con el objetivo de comprobar el reconocimiento de predicado
 > **Comando**
 
  > ./executable < test/code3 > out/code3.out
+contenido code3.txt:
+p:2*(7-9)<12;
+x:=45;
+s:[(3x1+4x23)]z89 < x;
+q:3/87+5<>x;
+y:=45x-67;
+Leer(s);
+t2134343434:=[(p&&q)||r]->(s||t);
+t22:=[p&&(q||r)]->(s||t);
+Escribir(t21,t22);
 
 > **Resultados**
 Este test se realizo con el objetivo de comprobar el reconocimiento de predicados  algebraicos y ademas comprobar que el analizador léxico omita las tabulaciones y los espacios.Efectivamente el test muestra que reconoce dichos predicados algebraicos al observar la salida y ademas omite la tabulaciones y espacios pues no genera ningún token para estos,
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNjQ3NDE3NiwtMTkyMDE0MTY0OF19
+eyJoaXN0b3J5IjpbLTE2ODY1OTcxMywxMDE2NDc0MTc2LC0xOT
+IwMTQxNjQ4XX0=
 -->
