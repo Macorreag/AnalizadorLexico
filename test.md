@@ -16,7 +16,7 @@ Este test corresponde al enviado por el profesor para realizar la prueba del ana
  > ./executable < test/code2 > out/code2.out
 
 > **Resultados**
-Este test se realizo con el objetivo de 
+Este test se realizo con el objetivo de comprobar el reconocimiento de predicados aritméticos,  los operadores ,numeros   operador  number 
 
 ### Test3
 
@@ -26,5 +26,5 @@ Este test se realizo con el objetivo de
 
 > **Resultados**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNzU3NzcxLC0xOTIwMTQxNjQ4XX0=
+eyJoaXN0b3J5IjpbMTgxMDMwNzMxMiwtMTkyMDE0MTY0OF19
 -->
