@@ -56,7 +56,7 @@ Patrones que se reconoceran del fichero de entrada
 
 
 
-{ARITMETIC}||{LOGIC}||{RELATIONAL}	{ printf( " operador "); }
+{ARITMETIC}|{LOGIC}|{RELATIONAL}	{ printf( " operador "); }
 
 {DELIMITER}		{ printf( " delimitador "); }
 {COMMENT}		/*Linea de commentario*/

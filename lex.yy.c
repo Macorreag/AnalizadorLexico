@@ -375,8 +375,8 @@ static void yy_fatal_error (yyconst char msg[]  );
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
 
-#define YY_NUM_RULES 12
-#define YY_END_OF_BUFFER 13
+#define YY_NUM_RULES 10
+#define YY_END_OF_BUFFER 11
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -386,9 +386,9 @@ struct yy_trans_info
 	};
 static yyconst flex_int16_t yy_accept[41] =
     {   0,
-        0,    0,   13,   11,    1,    1,   11,   11,    8,    5,
-        5,   11,    2,    7,   10,    7,    7,    3,    4,   11,
-        1,    0,    9,    6,    2,    0,    2,    7,    3,    4,
+        0,    0,   11,    9,    1,    1,    9,    9,    6,    5,
+        5,    9,    2,    5,    8,    5,    5,    3,    4,    9,
+        1,    0,    7,    5,    2,    0,    2,    5,    3,    4,
         2,    3,    4,    3,    4,    3,    4,    3,    4,    0
     } ;
 
@@ -502,7 +502,7 @@ Build with
 Test with 
 
 > ./executable < test/code1 > out/code1.out
-	
+		
 */
 #line 17 "main.l"
 
@@ -804,7 +804,7 @@ YY_RULE_SETUP
 case 2:
 YY_RULE_SETUP
 #line 51 "main.l"
-{ printf( " number " ); }
+{ printf( " Numbero " ); }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
@@ -823,41 +823,31 @@ YY_RULE_SETUP
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 60 "main.l"
-{ printf( " operador "); }
+#line 61 "main.l"
+{ printf( " delimitador "); }
 	YY_BREAK
 case 7:
+/* rule 7 can match eol */
 YY_RULE_SETUP
-#line 61 "main.l"
-{ printf( " operador "); }
+#line 62 "main.l"
+/*Linea de commentario*/
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 63 "main.l"
-{ printf( " delimitador "); }
+#line 64 "main.l"
+{ printf( "\n"); }
 	YY_BREAK
 case 9:
-/* rule 9 can match eol */
 YY_RULE_SETUP
-#line 64 "main.l"
-/*Linea de commentario*/
+#line 67 "main.l"
+{ printf( "Desconocido" ); }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 66 "main.l"
-{ printf( "\n"); }
-	YY_BREAK
-case 11:
-YY_RULE_SETUP
 #line 69 "main.l"
-{ printf( "Desconocido" ); }
-	YY_BREAK
-case 12:
-YY_RULE_SETUP
-#line 71 "main.l"
 ECHO;
 	YY_BREAK
-#line 861 "lex.yy.c"
+#line 851 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1858,7 +1848,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 71 "main.l"
+#line 69 "main.l"
 
 
 

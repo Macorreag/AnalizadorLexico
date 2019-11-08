@@ -1,9 +1,9 @@
- predicadoArit  operador  number  operador  delimitador  number  operador  number  delimitador  operador  number 
- predicadoAlge  operador  number 
-Desconocido operador  delimitador  delimitador  number  predicadoAlge  operador  number  predicadoAlge  delimitador  delimitador  predicadoAlge  operador  predicadoAlge 
- predicadoArit  operador  number  operador  number  operador  number  operador  predicadoAlge 
- predicadoAlge  operador  number  predicadoAlge  operador  number 
+ predicadoArit  operador  Numbero  operador  delimitador  Numbero  operador  Numbero  delimitador  operador  Numbero 
+ predicadoAlge  operador  Numbero 
+Desconocido operador  delimitador  delimitador  Numbero  predicadoAlge  operador  Numbero  predicadoAlge  delimitador  delimitador  predicadoAlge  operador  predicadoAlge 
+ predicadoArit  operador  Numbero  operador  Numbero  operador  Numbero  operador  predicadoAlge 
+ predicadoAlge  operador  Numbero  predicadoAlge  operador  Numbero 
 DesconocidoDesconocidoDesconocido predicadoArit  delimitador Desconocido delimitador 
- predicadoArit  number  operador  delimitador  delimitador  predicadoArit  operador  predicadoArit  delimitador  operador  predicadoArit  delimitador  operador  delimitador Desconocido operador  predicadoArit  delimitador 
+ predicadoArit  Numbero  operador  delimitador  delimitador  predicadoArit  operador  predicadoArit  delimitador  operador  predicadoArit  delimitador  operador  delimitador Desconocido operador  predicadoArit  delimitador 
  predicadoArit  operador  delimitador  predicadoArit  operador  delimitador  predicadoArit  operador  predicadoArit  delimitador  delimitador  operador  delimitador Desconocido operador  predicadoArit  delimitador 
 DesconocidoDesconocidoDesconocido predicadoArit DesconocidoDesconocidoDesconocido predicadoArit  delimitador  predicadoArit Desconocido predicadoArit  delimitador 
